@@ -1,29 +1,32 @@
 #include <iostream>
+#define MAX 1001
 using namespace std;
  
-int arr[5][5];
- 
+int arr[MAX][MAX];
+int n;
 int main() {
 	int tmp = 1;
-	for(int i = 0 ;i<5;++i){
+	// input 
+	cin>>n;
+	for(int i = 0 ;i<n;++i){
 		if(i % 2 == 0){
-			for(int j = i ;j<5;++j){
+			for(int j = i ;j<n;++j){
 				//cout<<4-j+i<<" "<<j<<"\n";
-				arr[4-j+i][j] = tmp++;
+				arr[n-1-j+i][j] = tmp++;
 			}
 		}
 		else{
-			for(int j = i ;j<5;++j){
+			for(int j = i ;j<n;++j){
 				//cout<<4-j+i<<" "<<j<<"\n";
-				arr[j][4-j+i] = tmp++;
+				arr[j][n-1-j+i] = tmp++;
 			}
 		}
  
  
 	}
  
-	for(int i = 0 ; i<5;++i){
-		for(int j = 0; j <5;++j){
+	for(int i = 0 ; i<n;++i){
+		for(int j = 0; j <n;++j){
 			cout<<arr[i][j]<<" ";
 		}
 		cout<<endl;
