@@ -30,7 +30,7 @@ bool solve(int num){
 int main(void){
     cin>>n;
     if(n>99){
-      for(int i = 123;i<=n;++i){
+      for(int i = 100;i<=n;++i){
         if(solve(i))cnt++;
       }
       cout<<cnt+99<<endl;
